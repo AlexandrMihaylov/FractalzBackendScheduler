@@ -1,0 +1,264 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz\\Fractalz.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Application\\Fractalz.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Application\\Fractalz.Application.csproj",
+        "projectName": "Fractalz.Application",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Application\\Fractalz.Application.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Infrastructure.Database\\Fractalz.Infrastructure.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Infrastructure.Database\\Fractalz.Infrastructure.Database.csproj",
+        "projectName": "Fractalz.Infrastructure.Database",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Infrastructure.Database\\Fractalz.Infrastructure.Database.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Infrastructure.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Application\\Fractalz.Application.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Application\\Fractalz.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz\\Fractalz.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz\\Fractalz.csproj",
+        "projectName": "Fractalz",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz\\Fractalz.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Application\\Fractalz.Application.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Application\\Fractalz.Application.csproj"
+              },
+              "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Infrastructure.Database\\Fractalz.Infrastructure.Database.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\terminal\\meet\\projects\\FractalzBackendScheduler\\FractalzBackendScheduler\\Fractalz.Infrastructure.Database\\Fractalz.Infrastructure.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
