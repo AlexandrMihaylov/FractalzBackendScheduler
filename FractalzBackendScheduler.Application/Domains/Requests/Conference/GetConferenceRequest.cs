@@ -10,4 +10,9 @@ public class GetConferenceRequest : IRequest<GetConferenceResponse>
     /// IdUser
     /// </summary>
     public Guid IdUser { get; set; }
+    
+    /// <summary>
+    /// DateTime
+    /// </summary>
+    public DateTime DateTime { get; set; }
 }

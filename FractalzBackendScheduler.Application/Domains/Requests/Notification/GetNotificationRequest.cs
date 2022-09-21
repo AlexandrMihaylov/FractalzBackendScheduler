@@ -1,10 +1,10 @@
 ﻿using System;
-using FractalzBackendScheduler.Application.Domains.Responses.Meeting;
+using FractalzBackendScheduler.Application.Domains.Responses.Notification;
 using MediatR;
 
-namespace FractalzBackendScheduler.Application.Domains.Requests.Meeting;
+namespace FractalzBackendScheduler.Application.Domains.Requests.Notification;
 
-public class GetMeetingRequest : IRequest<GetMeetingResponse>
+public class GetNotificationRequest : IRequest<GetNotificationResponse>
 {
     /// <summary>
     /// IdUser

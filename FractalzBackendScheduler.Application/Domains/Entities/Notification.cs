@@ -27,4 +27,9 @@ public class Notification
     /// Текст
     /// </summary>
     public string Text { get; set; }
+    
+    /// <summary>
+    /// IsDeleted
+    /// </summary>
+    public bool IsDeleted { get; set; }
 }

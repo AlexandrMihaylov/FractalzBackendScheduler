@@ -85,8 +85,8 @@ public class MeetingController : ControllerBase
     /// <returns></returns>
     [HttpPut]
     [Route("updateMeeting")]
-    [SwaggerResponse(StatusCodes.Status200OK, "Обновить встречу", typeof(PutMeetingResponse))]
-    public async Task<IActionResult> PutMeeting([FromQuery] PutMeetingRequest request)
+    [SwaggerResponse(StatusCodes.Status200OK, "Обновить встречу", typeof(UpdateMeetingResponse))]
+    public async Task<IActionResult> UpdateMeeting([FromQuery] UpdateMeetingRequest request)
     {
         var resp = await _mediator.Send(request);
 

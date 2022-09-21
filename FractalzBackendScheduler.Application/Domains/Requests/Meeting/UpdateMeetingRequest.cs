@@ -1,22 +1,14 @@
-﻿using System;
+﻿using FractalzBackendScheduler.Application.Domains.Responses.Meeting;
+using MediatR;
 
-namespace FractalzBackendScheduler.Application.Domains.Entities;
+namespace FractalzBackendScheduler.Application.Domains.Requests.Meeting;
 
-/// <summary>
-/// Meeting
-/// </summary>
-public class Meeting
+public class UpdateMeetingRequest : IRequest<UpdateMeetingResponse>
 {
     /// <summary>
     /// Id
     /// </summary>
-    //[Key]
     public Guid Id { get; set; }
-    
-    /// <summary>
-    /// IdUser
-    /// </summary>
-    public Guid IdUser { get; set; }
     
     /// <summary>
     /// Время начала
@@ -32,9 +24,4 @@ public class Meeting
     /// Текст
     /// </summary>
     public string Text { get; set; }
-    
-    /// <summary>
-    /// IsDeleted
-    /// </summary>
-    public bool IsDeleted { get; set; }
 }

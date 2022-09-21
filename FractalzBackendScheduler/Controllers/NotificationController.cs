@@ -78,14 +78,14 @@ public class NotificationController : ControllerBase
     }
     
     /// <summary>
-    /// PutNotification
+    /// UpdateNotification
     /// </summary>
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPut]
-    [Route("putNotification")]
-    [SwaggerResponse(StatusCodes.Status200OK, "Обновить уведомление", typeof(PutNotificationResponse))]
-    public async Task<IActionResult> PutNotification([FromQuery] PutNotificationRequest request)
+    [Route("updateNotification")]
+    [SwaggerResponse(StatusCodes.Status200OK, "Обновить уведомление", typeof(UpdateNotificationResponse))]
+    public async Task<IActionResult> UpdateNotification([FromQuery] UpdateNotificationRequest request)
     {
         var resp = await _mediator.Send(request);
 

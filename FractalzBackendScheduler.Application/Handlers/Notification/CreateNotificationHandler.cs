@@ -1,8 +1,3 @@
-using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using FractalzBackendScheduler.Application.Domains.Entities;
 using FractalzBackendScheduler.Application.Abstractions;
 using FractalzBackendScheduler.Application.Domains.Requests.Notification;
 using FractalzBackendScheduler.Application.Domains.Responses.Notification;
@@ -24,6 +19,7 @@ public class CreateNotificationHandler: IRequestHandler<CreateNotificationReques
         notification.IdUser = request.IdUser;
         notification.Date = request.Date;
         notification.Text = request.Text;
+        notification.IsDeleted = false;
         
         var res = _repositoryNotification.Create(notification);
 

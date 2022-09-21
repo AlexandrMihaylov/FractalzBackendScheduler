@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using FractalzBackendScheduler.Application.Domains.Entities;
-using FractalzBackendScheduler.Application.Abstractions;
+﻿using FractalzBackendScheduler.Application.Abstractions;
 using FractalzBackendScheduler.Application.Domains.Requests.Meeting;
 using FractalzBackendScheduler.Application.Domains.Responses.Meeting;
 using MediatR;
@@ -20,7 +14,17 @@ public class GetMeetingHandler: IRequestHandler<GetMeetingRequest, GetMeetingRes
     }
     public async Task<GetMeetingResponse> Handle(GetMeetingRequest request, CancellationToken cancellationToken)
     {
-        var res = _repositoryMeeting.Get(i => i.IdUser == request.IdUser).OrderBy((setting => setting.DateStart)).ToList();
+        var reqdate = request.DateTime;
+        
+        DateTime reqstart = new DateTime(reqdate.Year, reqdate.Month, reqdate.Day, 0, 0, 0, 0);
+        DateTime reqend = new DateTime(reqdate.Year, reqdate.Month, reqdate.Day, 23, 59, 59, 999);
+
+        var res = _repositoryMeeting.Get(
+            i => i.IdUser == request.IdUser &&
+                 i.DateStart >= reqstart &&
+                 i.DateStart <= reqend
+        ).OrderBy((setting => setting.DateStart)).ToList();
+        
         if (res == null)
         { return new GetMeetingResponse() { Message = "", Success = false }; }
         else 

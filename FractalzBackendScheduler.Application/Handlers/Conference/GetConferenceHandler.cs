@@ -20,7 +20,17 @@ public class GetConferenceHandler: IRequestHandler<GetConferenceRequest, GetConf
     }
     public async Task<GetConferenceResponse> Handle(GetConferenceRequest request, CancellationToken cancellationToken)
     {
-        var res = _repositoryConference.Get(i => i.IdUser == request.IdUser).OrderBy((setting => setting.DateStart)).ToList();
+        var reqdate = request.DateTime;
+        
+        DateTime reqstart = new DateTime(reqdate.Year, reqdate.Month, reqdate.Day, 0, 0, 0, 0);
+        DateTime reqend = new DateTime(reqdate.Year, reqdate.Month, reqdate.Day, 23, 59, 59, 999);
+
+        var res = _repositoryConference.Get(
+            i => i.IdUser == request.IdUser &&
+            i.DateStart >= reqstart &&
+            i.DateStart <= reqend
+            ).OrderBy((setting => setting.DateStart)).ToList();
+        
         if (res == null)
         { return new GetConferenceResponse() { Message = "", Success = false }; }
         else 

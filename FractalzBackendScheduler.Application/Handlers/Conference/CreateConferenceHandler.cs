@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using FractalzBackendScheduler.Application.Domains.Entities;
-using FractalzBackendScheduler.Application.Abstractions;
+﻿using FractalzBackendScheduler.Application.Abstractions;
 using FractalzBackendScheduler.Application.Domains.Requests.Conference;
 using FractalzBackendScheduler.Application.Domains.Responses.Conference;
 using MediatR;
@@ -25,6 +20,7 @@ public class CreateConferenceHandler: IRequestHandler<CreateConferenceRequest, C
         conference.DateStart = request.DateStart;
         conference.DateEnd = request.DateEnd;
         conference.Text = request.Text;
+        conference.IsDeleted = false;
         
         var res = _repositoryConference.Create(conference);
 

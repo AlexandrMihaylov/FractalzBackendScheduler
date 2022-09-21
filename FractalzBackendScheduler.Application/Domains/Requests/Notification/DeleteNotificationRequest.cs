@@ -1,13 +1,12 @@
-﻿using System;
+﻿using MediatR;
 using FractalzBackendScheduler.Application.Domains.Responses.Notification;
-using MediatR;
 
 namespace FractalzBackendScheduler.Application.Domains.Requests.Notification;
 
-public class GetNotificationRequest : IRequest<GetNotificationResponse>
+public class DeleteNotificationRequest : IRequest<DeleteNotificationResponse>
 {
     /// <summary>
-    /// IdUser
+    /// Id
     /// </summary>
-    public Guid IdUser { get; set; }
+    public Guid Id { get; set; }
 }

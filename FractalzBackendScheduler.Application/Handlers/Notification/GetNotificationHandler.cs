@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using FractalzBackendScheduler.Application.Domains.Entities;
-using FractalzBackendScheduler.Application.Abstractions;
+﻿using FractalzBackendScheduler.Application.Abstractions;
 using FractalzBackendScheduler.Application.Domains.Requests.Notification;
 using FractalzBackendScheduler.Application.Domains.Responses.Notification;
 using MediatR;
@@ -20,7 +14,17 @@ public class GetNotificationHandler: IRequestHandler<GetNotificationRequest, Get
     }
     public async Task<GetNotificationResponse> Handle(GetNotificationRequest request, CancellationToken cancellationToken)
     {
-        var res = _repositoryNotification.Get(i => i.IdUser == request.IdUser).OrderBy((setting => setting.Date)).ToList();
+        var reqdate = request.DateTime;
+        
+        DateTime reqstart = new DateTime(reqdate.Year, reqdate.Month, reqdate.Day, 0, 0, 0, 0);
+        DateTime reqend = new DateTime(reqdate.Year, reqdate.Month, reqdate.Day, 23, 59, 59, 999);
+
+        var res = _repositoryNotification.Get(
+            i => i.IdUser == request.IdUser &&
+                 i.Date >= reqstart &&
+                 i.Date <= reqend
+        ).OrderBy((setting => setting.Date)).ToList();
+        
         if (res == null)
         { return new GetNotificationResponse() { Message = "", Success = false }; }
         else 

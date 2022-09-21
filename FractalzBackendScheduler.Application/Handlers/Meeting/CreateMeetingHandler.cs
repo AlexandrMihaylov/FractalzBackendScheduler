@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using FractalzBackendScheduler.Application.Domains.Entities;
-using FractalzBackendScheduler.Application.Abstractions;
+﻿using FractalzBackendScheduler.Application.Abstractions;
 using FractalzBackendScheduler.Application.Domains.Requests.Meeting;
 using FractalzBackendScheduler.Application.Domains.Responses.Meeting;
 using MediatR;
@@ -25,7 +20,7 @@ public class CreateMeetingHandler: IRequestHandler<CreateMeetingRequest, CreateM
         meeting.DateStart = request.DateStart;
         meeting.DateEnd = request.DateEnd;
         meeting.Text = request.Text;
-        
+        meeting.IsDeleted = false;        
         var res = _repositoryMeeting.Create(meeting);
 
         if (res == 0)
